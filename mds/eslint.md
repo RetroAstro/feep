@@ -1,4 +1,4 @@
-##### plugins : 
+#### plugins : 
 
 * `eslint`
 * `eslint-loader`
