@@ -9,3 +9,41 @@
 * [x] [gitignore](./mds/gitignore.md)
 * [x] [postcssrc](./mds/postcssrc.md)
 
+##### 前端工程化项目环境搭建
+
+1. 配置 build 目录下的文件
+
+目录结构 : 
+
+```js
++ build
+  -- build.js
+  -- utils.js
+  -- vue-loader.conf.js
+  -- webpack.base.conf.js
+  -- webpack.dev.conf.js
+  -- webpack.prod.conf.js
++ // ...
+```
+
+* [ ] build
+* [ ] utils
+* [ ] vue-loader
+* [ ] webpack.base
+* [ ] webapck.dev
+* [ ] webpack.prod
+
+2. 配置 config 目录下的文件
+
+目录结构 : 
+```js
++ config
+  -- index.js
+  -- dev.env.js
+  -- prod.env.js
++ // ...
+```
+* [ ] index
+* [ ] dev.env
+* [ ] prod.env
+
