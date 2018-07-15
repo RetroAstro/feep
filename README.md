@@ -1,7 +1,7 @@
 ## 基于 Vue 与 Webpack 的前端工程项目实践
 
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg) &nbsp; ![code-style-standard](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)
-##### 前端开发规范与配置文件
+#### 前端开发规范与配置文件
 
 * [x] [eslint](./mds/eslint.md)
 * [x] [babel](./mds/babel.md)
@@ -9,7 +9,7 @@
 * [x] [gitignore](./mds/gitignore.md)
 * [x] [postcssrc](./mds/postcssrc.md)
 
-##### 前端工程化项目环境搭建
+#### 前端工程化项目环境搭建
 
 1. 配置 build 目录下的文件
 
