@@ -3,15 +3,28 @@
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg) &nbsp; ![code-style-standard](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)
 #### 前端开发规范与配置文件
 
-* [x] [eslint](./mds/eslint.md)
-* [x] [babel](./mds/babel.md)
-* [x] [editorconfig](./mds/editorconfig.md)
-* [x] [gitignore](./mds/gitignore.md)
-* [x] [postcssrc](./mds/postcssrc.md)
+* [x] [eslint](./handout/basic/eslint.md)
+* [x] [babel](./handout/basic/babel.md)
+* [x] [editorconfig](./handout/basic/editorconfig.md)
+* [x] [gitignore](./handout/basic/gitignore.md)
+* [x] [postcssrc](./handout/basic/postcssrc.md)
+* [x] [package](./handout/basic/package.md)
 
 #### 前端工程化项目环境搭建
 
-1. 配置 build 目录下的文件
+1. 配置 config 目录下的文件
+
+目录结构 : 
+
+```js
++ config
+  -- index.js
++ // ...
+```
+
+- [x] [index](./handout/env/index)
+
+2. 配置 build 目录下的文件
 
 目录结构 : 
 
@@ -26,24 +39,12 @@
 + // ...
 ```
 
-* [ ] build
-* [ ] utils
-* [ ] vue-loader
+* [x] [build](./handout/env/build)
+* [x] [utils](./handout/env/utils)
 * [ ] webpack.base
 * [ ] webapck.dev
 * [ ] webpack.prod
+* [x] [vue-loader.conf]()   ( 生成 vueLoaderConfig ) 
 
-2. 配置 config 目录下的文件
 
-目录结构 : 
-```js
-+ config
-  -- index.js
-  -- dev.env.js
-  -- prod.env.js
-+ // ...
-```
-* [ ] index
-* [ ] dev.env
-* [ ] prod.env
 
