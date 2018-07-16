@@ -6,7 +6,7 @@
 
 2. "scripts" 的书写
 
-项目中不同环境下需要运行不同的指令, 如常用的指令 : 
+项目中不同环境下需要运行不同的脚本指令, 如常用的有 : 
 
 ```js
 // 开始打包项目
@@ -17,8 +17,7 @@
 ```js
 // 运行开发环境
 "dev": "npm run dev:client",
-"dev:client": 
-"cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.conf.js"
+"dev:client": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.conf.js"
 ```
 
 ```js
