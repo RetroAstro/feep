@@ -22,7 +22,7 @@
 + // ...
 ```
 
-- [x] [index](./handout/env/index)
+- [x] [index](./handout/env/config.md)
 
 2. 配置 build 目录下的文件
 
@@ -39,12 +39,12 @@
 + // ...
 ```
 
-* [x] [build](./handout/env/build)
-* [x] [utils](./handout/env/utils)
+* [x] [build](./handout/env/build.md)
+* [x] [utils](./handout/env/utils.md)
 * [ ] webpack.base
 * [ ] webapck.dev
 * [ ] webpack.prod
-* [x] [vue-loader.conf]()   ( 生成 vueLoaderConfig ) 
+* [x] vue-loader.conf   ( 生成 vueLoaderConfig ) 
 
 
 
