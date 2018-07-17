@@ -1,6 +1,6 @@
 ## 基于 Vue 与 Webpack 的前端工程项目实践
 
-![license](https://img.shields.io/github/license/mashape/apistatus.svg) &nbsp; ![code-style-standard](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)
+![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000) &nbsp; ![code-style-standard](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)
 #### 前端开发规范与配置文件
 
 * [x] [eslint](./handout/basic/eslint.md)
