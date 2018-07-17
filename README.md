@@ -32,7 +32,7 @@
 + build
   -- build.js
   -- utils.js
-  -- vue-loader.conf.js ( 生成 VueLoaderConfig )
+  -- vue-loader.conf.js
   -- webpack.base.conf.js
   -- webpack.dev.conf.js
   -- webpack.prod.conf.js
@@ -44,7 +44,7 @@
 * [x] [webpack.base](./handout/env/base.md)
 * [x] [webapck.dev](./handout/env/dev.md)
 * [x] [webpack.prod](./handout/env/prod.md)
-
+* [x] vue-loader.conf ( 生成 VueLoaderConfig )
 
 
 
