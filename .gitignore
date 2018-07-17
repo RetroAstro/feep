@@ -20,5 +20,6 @@ yarn-error.log*
 *.sln
 *.sw*
 
-# lock
+# other files
 package-lock.json
+.cache

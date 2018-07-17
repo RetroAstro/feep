@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin')
 
 const webpackConfig = merge(baseWebpackConfig, {
     mode: 'production',
@@ -34,14 +34,21 @@ const webpackConfig = merge(baseWebpackConfig, {
         name: 'manifest'
       },
       minimizer: [
-        new UglifyJsPlugin({
-          cache: true,
-          parallel: true,
-          sourceMap: config.build.productionSourceMap,
-          uglifyOptions: {
-            warnings: false
+        new ParallelUglifyPlugin({
+          cacheDir: '.cache/',
+          uglifyJS: {
+            output: {
+              comments: false,
+              beautify: false
+            },
+            compress: {
+              warnings: false,
+              drop_console: true,
+              collapse_vars: true,
+              reduce_vars: true
+            }
           }
-        }),
+        }),    
         new OptimizeCSSPlugin({
           cssProcessorOptions: config.build.productionSourceMap
             ? { safe: true, map: { inline: false } }
@@ -80,20 +87,15 @@ const webpackConfig = merge(baseWebpackConfig, {
         minify: {
           removeComments: true,
           collapseWhitespace: true,
-          removeAttributeQuotes: true,
-          minifyCSS: true,
-          minifyJS: true
+          removeAttributeQuotes: true
         },
         chunksSortMode: 'dependency'
       }),
 
-      // make your codes run faster on browsers ...
       new webpack.optimize.ModuleConcatenationPlugin(),
 
-      // keep module.id stable when vendor modules does not change
       new webpack.HashedModuleIdsPlugin(),
   
-      // copy custom static assets
       new CopyWebpackPlugin([
         {
           from: path.resolve(__dirname, '../static'),
