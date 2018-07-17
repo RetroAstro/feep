@@ -15,7 +15,7 @@
 ```
 
 ```js
-// 运行开发环境
+// 运行开发环境服务器
 "dev": "npm run dev:client",
 "dev:client": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.conf.js"
 ```
