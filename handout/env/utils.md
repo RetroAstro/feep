@@ -82,7 +82,7 @@ exports.cssLoaders = function (options) {
 
 * 外联样式文件的打包
 
-即不在 .vue 直接写样式而是单独在外联文件中书写时需要用到。
+即不在 .vue 文件中直接写样式而是单独在外联文件中书写时需要用到。
 
 ```js
 exports.styleLoaders = function (options) {
