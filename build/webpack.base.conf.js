@@ -11,9 +11,7 @@ const resolve = dir => path.join(__dirname, '..', dir)
 
 module.exports = {
     target: 'web',
-    entry: {
-        app: resolve('src/client/pages/home/main.js')
-    },
+    entry: utils.entries(),
     output: {
         path: config.build.assetsRoot,
         filename: '[name].js',
@@ -28,10 +26,7 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
-            '@components': resolve('src/client/components'),
-            '@router': resolve('src/client/router'),
-            '@store': resolve('src/client/store'),
-            '@home': resolve('src/client/pages/home/views')
+            '@store': resolve('src/client/store')
         }
     },
     module: {
@@ -59,13 +54,13 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader', 
-                include: resolve("src"),
+                include: resolve('src/client'),
                 exclude: /node_modules/
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
-                include: [resolve('src/client/assets/')],
+                include: [resolve('src/client')],
                 options: {
                   limit: 10000,
                   name: utils.assetsPath('img/[name].[hash:7].[ext]')

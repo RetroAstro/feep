@@ -14,6 +14,7 @@ module.exports = {
         bundleIntelligentDashboard: process.env.npm_config_dashboard
     },
     dev: {
+        host: 'localhost',
         port: 8080,
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',

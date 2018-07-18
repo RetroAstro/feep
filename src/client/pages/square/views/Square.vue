@@ -1,18 +1,18 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.jpg">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img src="../assets/scene.jpg">
+    <Center guest="RetroAstro"/>
   </div>
 </template>
 
 <script>
 
-import HelloWorld from '../components/HelloWorld.vue'
+import Center from '../components/Center.vue'
 
 export default {
-  name: 'home',
+  name: 'square',
   components: {
-    HelloWorld
+    Center
   }
 }
 </script>

@@ -6,7 +6,7 @@ const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin')
@@ -53,22 +53,22 @@ const webpackConfig = merge(baseWebpackConfig, {
           cssProcessorOptions: config.build.productionSourceMap
             ? { safe: true, map: { inline: false } }
             : { safe: true }
-        }),
+        })
       ],
       splitChunks: {
-        chunks: 'async',
-        minSize: 30000,
-        minChunks: 1,
-        maxAsyncRequests: 5,
-        maxInitialRequests: 3,
-        name: false,
+        // chunks: 'async',
+        // minSize: 30000,
+        // maxSize: 0,
+        // minChunks: 1,
+        // maxAsyncRequests: 5,
+        // maxInitialRequests: 3,
+        // automaticNameDelimiter: '~',
+        // name: true,
         cacheGroups: {
           vendor: {
+            test: /[\\/]node_modules[\\/]/,
             name: 'vendor',
-            chunks: 'initial',
-            priority: -10,
-            reuseExistingChunk: false,
-            test: /node_modules\/(.*)\.js/
+            chunks: 'all'
           }
         }
       }
@@ -80,17 +80,17 @@ const webpackConfig = merge(baseWebpackConfig, {
         chunkFilename: utils.assetsPath('css/app.[contenthash:12].css')
       }),
 
-      new HtmlWebpackPlugin({
-        filename: config.build.index,
-        template: 'src/client/pages/home/index.html',
-        inject: true,
-        minify: {
-          removeComments: true,
-          collapseWhitespace: true,
-          removeAttributeQuotes: true
-        },
-        chunksSortMode: 'dependency'
-      }),
+      // new HtmlWebpackPlugin({
+      //   filename: config.build.index,
+      //   template: 'src/client/pages/home/index.html',
+      //   inject: true,
+      //   minify: {
+      //     removeComments: true,
+      //     collapseWhitespace: true,
+      //     removeAttributeQuotes: true
+      //   },
+      //   chunksSortMode: 'dependency'
+      // }),
 
       new webpack.optimize.ModuleConcatenationPlugin(),
 
@@ -103,7 +103,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           ignore: ['.*']
         }
       ])
-    ]
+    ].concat(utils.htmlPlugin())
   })
   
   if (config.build.productionGzip) {
