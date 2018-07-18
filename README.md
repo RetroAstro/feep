@@ -32,7 +32,7 @@
 + build
   -- build.js
   -- utils.js
-  -- vue-loader.conf.js ( 生成 VueLoaderConfig )
+  -- vue-loader.conf.js
   -- webpack.base.conf.js
   -- webpack.dev.conf.js
   -- webpack.prod.conf.js
