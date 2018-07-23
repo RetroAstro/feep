@@ -46,7 +46,7 @@
 * [x] [webpack.prod](./handout/env/prod.md)
 * [x] [mutipage](./handout/env/mutipage.md)
 
-#### 前端项目实战
+#### 前端项目实战 : 搭建自己的个人博客
 
 
 
